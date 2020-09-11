@@ -1,0 +1,221 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 5px 0 10px 0;
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+}
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+body {
+  background-image: url(img/table.jpg);
+  /* Путь к фоновому изображению */
+  background-attachment: fixed;
+  /* Фиксируем фон веб-страницы */
+  background-size: cover;
+  height: 100%;
+}
+
+.wrapper {
+  display: flex;
+}
+
+.left-menu {
+  width: 300px;
+  min-height: 100vh;
+  padding: 0;
+  margin-left: 40px;
+  background-color: rgba(238, 240, 241, 0.507);
+  font-family: 'Roboto', sans-serif;
+}
+
+.left-menu {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #222;
+  font-size: 16px;
+  padding-left: 15px;
+  border-left: 2px solid #726344;
+  min-height: 100vh;
+  margin-left: 40px;
+}
+
+.widget-list {
+  padding: 50px 0px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  min-height: 100vh;
+  margin-left: 20px;
+  white-space: nowrap;
+}
+
+ .widget-item {
+  position: relative;
+  border: 2px solid #726344;
+  margin: 20px;
+  padding: 0px;
+  text-align: center;
+}
+
+
+button {
+  padding: 10px;
+  width: 100%;
+  height: 100%;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  border: solid 1px transparent;
+  border-radius: 4px;
+  outline: none;
+}
+
+button:active {
+  transform: translateY(1px);
+  filter: saturate(110%);
+}
+
+button:hover {
+  border-color: currentColor;
+  background-color: rgba(143, 143, 143, 0.513);
+}
+
+
+/*
+горизонтальный блок
+*/
+.main {
+  width: 800px;
+  min-height: 100%;
+  padding: 0;
+  margin-left: 80px;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-title {
+  margin-top: 55px;
+  display: flex;
+  align-items: center;
+  background-color: rgba(238, 240, 241, 0.507);
+}
+.h1 {
+  margin: 20px auto;
+  font-family: 'Roboto', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #444444;
+  font-size: 22px;
+
+}
+.list-wrapper {
+  margin-top: 110px;
+  align-items: center;
+  background-color: rgba(238, 240, 241, 0.507);
+  min-width: 100%;
+  min-height: 30%;
+  display: flex;
+  flex-direction: column;
+}
+
+.list-item {
+  margin: 40px 30px;
+}
+
+/* #picHolder {
+  width: 400px;
+  height: 400px;
+  margin: 40px 30px;
+  position: absolute;
+  display: none;
+  
+} */
+
+/* #picContainer a {
+  
+  cursor: pointer;
+} */
+
+.o2t-element--hidden, #hidden {
+  display: none;
+  transition: 1.55s opacity, .55s visibility;
+}
+
+.o2t-element--hidden2 {
+  visibility: hidden;
+  opacity: 0.1;
+  transition: .55s opacity, .55s visibility;
+  display: relative;
+}
+
+button:hover .o2t-element--hidden {
+  display: block;
+  transition: all 2s linear;
+  
+}
+
+.o2t-element2:hover .o2t-element--hidden2 {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* .widget-top {
+  margin-top: 50px;
+  margin-bottom: 0px;
+  margin-left: 40px;
+  min-height: 70px;
+  min-width: 100vh;
+  background-color: rgba(238, 240, 241, 0.642);
+
+  font-family: 'Roboto', sans-serif;
+
+  letter-spacing: 1px;
+  border-radius: 12px;
+  text-align: center;
+
+   height: 300px;
+   font-family: 'Courier New',
+   monospace;
+   color: #726344;
+   background-color: rgba(238, 240, 241, 0.642);
+   text-align: center;
+}
+*/
