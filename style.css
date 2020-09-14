@@ -39,6 +39,7 @@ img {
 }
 
 body {
+  font-family: 'Roboto', sans-serif;
   background-image: url(img/table.jpg);
   /* Путь к фоновому изображению */
   background-attachment: fixed;
@@ -57,70 +58,43 @@ body {
   padding: 0;
   margin-left: 40px;
   background-color: rgba(238, 240, 241, 0.507);
-  font-family: 'Roboto', sans-serif;
-}
-
-.left-menu {
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  color: #222;
-  font-size: 16px;
-  padding-left: 15px;
-  border-left: 2px solid #726344;
-  min-height: 100vh;
-  margin-left: 40px;
 }
 
 .widget-list {
-  padding: 50px 0px;
+  border-left: 2px solid rgba(34, 36, 20, 0.507);
   list-style: none;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   min-height: 100vh;
-  margin-left: 20px;
+  margin-left: 25px;
   white-space: nowrap;
+  position: fixed;
 }
 
- .widget-item {
-  position: relative;
-  border: 2px solid #726344;
-  margin: 20px;
-  padding: 0px;
-  text-align: center;
-}
-
-
-button {
-  padding: 10px;
-  width: 100%;
+a {
+  text-transform: uppercase;
+  display: block;
   height: 100%;
-  border: none;
+  left:0;
+  right:0;
+  font-size: 16px;
+  width: 90%;
   font: inherit;
   color: inherit;
-  background-color: transparent;
   cursor: pointer;
-  display: inline-block;
   text-align: center;
   text-decoration: none;
-  border: solid 1px transparent;
-  border-radius: 4px;
-  outline: none;
+  margin: 20px 5px;
+  margin-left: 15px;
+  padding: 10px 5px;
+  background-color: rgba(194, 194, 194, 0.507);
+  border-top: 1px solid rgba(34, 36, 20, 0.507);
+  border-bottom: 1px solid rgba(34, 36, 20, 0.507);
 }
-
-button:active {
-  transform: translateY(1px);
-  filter: saturate(110%);
-}
-
-button:hover {
-  border-color: currentColor;
-  background-color: rgba(143, 143, 143, 0.513);
-}
-
 
 /*
-горизонтальный блок
+Основной блок блок
 */
 .main {
   width: 800px;
@@ -129,25 +103,36 @@ button:hover {
   margin-left: 80px;
   display: flex;
   flex-direction: column;
+  list-style: none;
+  white-space: nowrap;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
 }
 
 .main-title {
   margin-top: 55px;
-  display: flex;
-  align-items: center;
   background-color: rgba(238, 240, 241, 0.507);
+  align-items: center;
+  justify-content: center;
 }
-.h1 {
+
+.h1 .persone {
   margin: 20px auto;
-  font-family: 'Roboto', sans-serif;
+  font: inherit;
   text-transform: uppercase;
   letter-spacing: 2px;
-  color: #444444;
   font-size: 22px;
-
+  color: rgba(34, 34, 34, 0.657);
+  text-align: center;
+  align-items: center;
+  justify-content: center;
 }
-.list-wrapper {
+
+.main-wrapper {
   margin-top: 110px;
+  padding: 10px;
   align-items: center;
   background-color: rgba(238, 240, 241, 0.507);
   min-width: 100%;
@@ -155,67 +140,44 @@ button:hover {
   display: flex;
   flex-direction: column;
 }
-
+.main-list {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+}
 .list-item {
-  margin: 40px 30px;
+  width: 100%;
+  border-bottom: 2px solid rgba(34, 36, 20, 0.507);
+  padding: 10px;
+  display: none;
 }
 
-/* #picHolder {
-  width: 400px;
-  height: 400px;
-  margin: 40px 30px;
-  position: absolute;
-  display: none;
-  
-} */
+.main-title {
+  position: sticky;
+  top: 0;
+}
 
-/* #picContainer a {
-  
-  cursor: pointer;
-} */
+.text {
+  margin: 10px 10px 10px 20px;
+  text-align: left;
+  word-break: break-all;
+  font-size: 14px;
+  text-transform: none;
+  white-space: pre-line;
+}
 
-.o2t-element--hidden, #hidden {
-  display: none;
+.subtitle {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+img {
+  width: 200px;
+  margin: auto;
+  background-color: none;
+}
+
+#hidden {
+  /*display: none; */
   transition: 1.55s opacity, .55s visibility;
 }
-
-.o2t-element--hidden2 {
-  visibility: hidden;
-  opacity: 0.1;
-  transition: .55s opacity, .55s visibility;
-  display: relative;
-}
-
-button:hover .o2t-element--hidden {
-  display: block;
-  transition: all 2s linear;
-  
-}
-
-.o2t-element2:hover .o2t-element--hidden2 {
-  opacity: 1;
-  visibility: visible;
-}
-
-/* .widget-top {
-  margin-top: 50px;
-  margin-bottom: 0px;
-  margin-left: 40px;
-  min-height: 70px;
-  min-width: 100vh;
-  background-color: rgba(238, 240, 241, 0.642);
-
-  font-family: 'Roboto', sans-serif;
-
-  letter-spacing: 1px;
-  border-radius: 12px;
-  text-align: center;
-
-   height: 300px;
-   font-family: 'Courier New',
-   monospace;
-   color: #726344;
-   background-color: rgba(238, 240, 241, 0.642);
-   text-align: center;
-}
-*/
