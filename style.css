@@ -1,3 +1,5 @@
+/* reset styles */
+
 * {
   margin: 0;
   padding: 0;
@@ -11,14 +13,14 @@ h1 {
   margin: 0;
   padding: 0;
 }
-/* Указываем box sizing */
+/* Specifying box sizing */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
-/* Выставляем основные настройки по-умолчанию для body */
+/* Set the basic default settings for the body */
 body {
   min-height: 100vh;
   scroll-behavior: smooth;
@@ -26,26 +28,22 @@ body {
   line-height: 1.5;
 }
 
-/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
 ul[class],
 ol[class] {
   list-style: none;
 }
 
-/* Упрощаем работу с изображениями */
 img {
-  max-width: 100%;
   display: block;
+  max-width: 100%;
 }
 
 body {
+  height: 100%;
   font-family: 'Roboto', sans-serif;
   background-image: url(img/table.jpg);
-  /* Путь к фоновому изображению */
   background-attachment: fixed;
-  /* Фиксируем фон веб-страницы */
   background-size: cover;
-  height: 100%;
 }
 
 .wrapper {
@@ -61,48 +59,48 @@ body {
 }
 
 .widget-list {
-  border-left: 2px solid rgba(34, 36, 20, 0.507);
-  list-style: none;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  min-height: 100vh;
-  margin-left: 25px;
   white-space: nowrap;
   position: fixed;
+  min-height: 100vh;
+  margin-left: 25px;
+  border-left: 2px solid rgba(34, 36, 20, 0.507);
+  list-style: none;
+
 }
 
 a {
   text-transform: uppercase;
   display: block;
+  width: 90%;
   height: 100%;
+  margin: 20px 5px;
+  margin-left: 15px;
+  padding: 10px 5px;
   left:0;
   right:0;
   font-size: 16px;
-  width: 90%;
   font: inherit;
   color: inherit;
   cursor: pointer;
   text-align: center;
   text-decoration: none;
-  margin: 20px 5px;
-  margin-left: 15px;
-  padding: 10px 5px;
   background-color: rgba(194, 194, 194, 0.507);
   border-top: 1px solid rgba(34, 36, 20, 0.507);
   border-bottom: 1px solid rgba(34, 36, 20, 0.507);
 }
 
-/*
-Основной блок блок
-*/
+/* Main block */
+
 .main {
+  display: flex;
+  flex-direction: column;
   width: 800px;
   min-height: 100%;
   padding: 0;
   margin-left: 80px;
-  display: flex;
-  flex-direction: column;
   list-style: none;
   white-space: nowrap;
   text-decoration: none;
@@ -113,9 +111,9 @@ a {
 
 .main-title {
   margin-top: 55px;
-  background-color: rgba(238, 240, 241, 0.507);
   align-items: center;
   justify-content: center;
+  background-color: rgba(238, 240, 241, 0.507);
 }
 
 .h1 .persone {
@@ -131,14 +129,15 @@ a {
 }
 
 .main-wrapper {
+  display: flex;
+  flex-direction: column;
   margin-top: 110px;
   padding: 10px;
   align-items: center;
-  background-color: rgba(238, 240, 241, 0.507);
   min-width: 100%;
   min-height: 30%;
-  display: flex;
-  flex-direction: column;
+  background-color: rgba(238, 240, 241, 0.507);
+
 }
 .main-list {
   display: flex;
@@ -147,9 +146,9 @@ a {
 }
 .list-item {
   width: 100%;
-  border-bottom: 2px solid rgba(34, 36, 20, 0.507);
   padding: 10px;
-  display: none;
+  border-bottom: 2px solid rgba(34, 36, 20, 0.507);
+
 }
 
 .main-title {
@@ -171,13 +170,29 @@ a {
   font-size: 18px;
 }
 
-img {
+.indication-wraper {
+   display: flex;
+}
+
+.modeCarusel {
+  font-size: 12px;
+  margin: auto;
+  margin-left: 10px;
+}
+
+.modeCarusel-on {
+  justify-content: flex-start;
+}
+
+.indication {
   width: 200px;
   margin: auto;
   background-color: none;
 }
 
-#hidden {
-  /*display: none; */
-  transition: 1.55s opacity, .55s visibility;
+.indication-small {
+  width: 50px;
+  align-content: flex-end;
+  background-color: none;
+  transition: 1s;
 }

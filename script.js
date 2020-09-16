@@ -1,15 +1,42 @@
 window.onload = function () {
 
-/*
- 1) через 1 секунду всплывает блок с Именем (слева кнопка жирнеет)
- 2) через 4 секунды всплывает блок с контактами ( слева кнопка жирнеет)
- 3) через 4 секунды запускается функция А
-    функция А  -  остальные блоки всплывают если влезают в экран.
-    если не влезают в экран то первый который поместился - исчезает, а появляется
-    следующий который не появлялся. (кнопки слева жирнеют)
-  4) если мыш не двигалась  блоки с 3его после функции А - исчезают)
-  5) если мыш наводится на кнопки слева - блоки исчезают и появляются ( помещаясь в блоке главного фона)
+  let indicator = document.querySelector('.indication');
+  let elementsList = document.querySelectorAll('.list-item');
+  let elementsMenu = document.querySelectorAll('.widget-item');
 
-*/
 
-};
+  function startIndicator() {
+    indicator.classList.add("indication-small");
+
+    let start = Date.now();
+    let timer = setInterval(function () {
+    let timePassed = Date.now() - start;
+
+    if (timePassed >= 1000) {
+      clearInterval(timer);
+      return;
+    }
+    draw(timePassed);
+
+    }, 20);
+
+    function draw(timePassed) {
+      indicator.style.marginLeft = 60 - (timePassed / 2.5) + 'px';
+    }
+  }
+
+  setTimeout(startIndicator, 2000);
+
+
+  elementsList.forEach((elem) => {
+    elem.style.display = "none";
+  });
+
+  function drawElementList() {
+    elementsList.forEach((elem) => {
+     let timerId = setTimeout(() => elem.style.display = "block", 3000);
+    });
+  }
+    setTimeout(drawElementList, 3000);
+  };
+
